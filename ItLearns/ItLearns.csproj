@@ -37,8 +37,12 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>G:\Program Files (x86)\Steam\steamapps\common\It Steals\It Steals_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx">
+    <Reference Include="BepInEx, Version=5.4.23.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>G:\Program Files (x86)\Steam\steamapps\common\It Steals\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>G:\Program Files (x86)\Steam\steamapps\common\It Steals\BepInEx\core\BepInEx.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Patches\FPsPatch.cs" />
     <Compile Include="Patches\MusicPatch.cs" />
+    <Compile Include="Patches\SteamPatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

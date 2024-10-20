@@ -33,6 +33,8 @@ namespace ItLearns
                 instance = new ItLearns();
             }
 
+            //Harmony.DEBUG = true;
+
             Log = base.Logger;
 
             Log.LogInfo("Mod has awaken");
@@ -40,12 +42,11 @@ namespace ItLearns
             Time.timeScale = 100;
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = 1;
-            //Time.fixedDeltaTime = Time.fixedDeltaTime / 100;
-
             harmony.PatchAll(typeof(ItLearns));
             harmony.PatchAll(typeof(MusicPatch));
             harmony.PatchAll(typeof(FPsPatch));
-            
+            harmony.PatchAll(typeof(SteamPatch));
+
             SceneManager.LoadSceneAsync("SampleScene");
         }
 
@@ -53,10 +54,5 @@ namespace ItLearns
         {
             Log.LogInfo(1 / Time.unscaledDeltaTime);
         }
-
-        //void FixedUpdate()
-        //{
-        //    Log.LogInfo(1 / Time.fixedDeltaTime);
-        //}
     }
 }
